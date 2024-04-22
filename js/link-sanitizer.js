@@ -1,7 +1,7 @@
 function sanitize_link(url) {
     return url
         .replace( /(youtu\.be)/gm, "www.youtube.com" )
-        .replaceAll( /(\?si|\?utm|\?igsh)[^\?\&\n]*/gm, "" )
+        .replaceAll( /[\?\&](si|utm|igsh)[^\?\&\n]*/gm, "" )
 }
 
 browser.webRequest.onBeforeRequest.addListener(

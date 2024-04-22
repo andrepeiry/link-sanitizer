@@ -1,10 +1,14 @@
 # Link Sanitizer
 ## Description
-Some shared URLs are poisoned with a source identifiers, allowing the owner of the site to create links between people. If you are a bit consious about your privacy, you may already remove them manually. This plugin is here to simplify and automate this "URL cropping" (both when clicking on it and sharing it).
-For example, clicking on [https://youtu.be/qOi4Ao40IYA?si=dummySI] would be reduce to [https://youtu.be/qOi4Ao40IYA]. If you where to click on the "Share" button on YouTube, it should give you the clean URL again, so that the not-privacy-driven URL doesn't even appear on your screen.
+Some shared URLs are poisoned with a source identifiers, allowing the owner of the site to create links between people. If you are a bit consious about your privacy, you may already remove them manually. This plugin is here to simplify and automate this "URL cropping".
 
-## Supported links
- - [None]
-### To be supported
- - YouTube
- - Instagram
+**What a Source Identifier (*SI*) ?**, clicking on https://youtu.be/qOi4Ao40IYA?si=dummySI would indicate to YouTube that you came from a *SI* called `dummySI`, but in reality, it will look more like a sequence of alphanumerical characters.
+
+### YouTube
+This extensions should remove a *SI* form the URL, as well as change `youtu.be` into `www.youtube.com`. (Untested for the moment). Inside the site, the extension will remove automatically the *SI* from the "Share" function.
+
+### Instagram
+This extensions should remove a *SI* from the URL.
+
+### Spotify
+This extensions should remove a *SI* from the URL.

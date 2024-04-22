@@ -4,17 +4,14 @@
     "version": "0.1",
   
     "description": "Remove source identifiers on URLs.",
+    "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
+    "background": {
+      "scripts": ["js/link-sanitizer.js", "js/copy-sanitizer.js"]
+    },
   
     "icons": {
       "48": "icons/border-48.png",
       "96": "icons/border-96.png"
-    },
-  
-    "content_scripts": [
-      {
-        "matches": ["*://www.youtube.com/*", "://youtu.be/*"],
-        "js": ["link-sanitizer.js"]
-      }
-    ]
+    }
   }
   

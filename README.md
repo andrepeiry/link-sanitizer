@@ -8,12 +8,15 @@ This plugin is here to simplify and automate this "URL cropping".
 Clicking on [https://youtu.be/qOi4Ao40IYA?si=dummySI](https://www.youtube.com/watch?v=qOi4Ao40IYA) would indicate to YouTube that you came from a *SI* called
 `dummySI`, but in reality, it will look more like a sequence of alphanumerical characters.
 
-### YouTube
+### In general
+The extension will remove any `utm` type of tracker, as well as any `si` ones.
+
+#### YouTube
 This extensions should remove a *SI* form the URL, as well as change `youtu.be` into `www.youtube.com`. (Untested). 
 Inside the site, the extension will remove automatically the *SI* from the "Share" function (Unimplemented).
 
-### Instagram
+#### Instagram
 This extensions should remove a *SI* from the URL (Untested).
 
-### Spotify
+#### Spotify
 This extensions should remove a *SI* from the URL (Untested).

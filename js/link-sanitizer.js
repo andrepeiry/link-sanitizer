@@ -8,4 +8,3 @@ function sanitize_link(url) {
         .replace( "youtu.be", "www.youtube.com" )
         .replaceAll( /[?&](si|utm|igsh|feature|feat|ft)[^?&\n]*/gm, "" )
 }
-  

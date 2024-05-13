@@ -9,14 +9,20 @@ Clicking on [https://youtu.be/qOi4Ao40IYA?si=dummySI](https://www.youtube.com/wa
 `dummySI`, but in reality, it will look more like a sequence of alphanumerical characters.
 
 ### In general
-The extension will remove any `utm` type of tracker, as well as any `si` ones.
+The extension will remove any `utm` type of tracker, as well as any `si` ones, and other known trackers.
 
-#### YouTube
-This extensions should remove a *SI* form the URL, as well as change `youtu.be` into `www.youtube.com`. (Untested). 
-Inside the site, the extension will remove automatically the *SI* from the "Share" function (Unimplemented).
+It will also remove any tracking utilities inside the HTML page
 
-#### Instagram
-This extensions should remove a *SI* from the URL (Untested).
+<i>Future feature] Crop the </i>SI<i>s in the "Share" option on the pages.
 
-#### Spotify
-This extensions should remove a *SI* from the URL (Untested).
+## Conception
+The files `js/listener.js` is the one that dispatch the listeners on the browser. Mainly
+- `js/link-sanitizer.js`, which remove trackers in the URL
+- `js/html-sanitizer.js`, which remove trackers in the HTML files, by using the following workers
+  - `js/html-sanitizer-worker.js` Produce pair of indexes to remove in the HTML file.
+
+The performances are to be tested for HTML files sanitization given their sizes. 
+
+## Research
+Tracking is a world that can change from day-to-day. The code is based by reading the HTML of the foolowing sites :
+- [YouTube](https://youtube.com)

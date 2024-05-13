@@ -6,7 +6,7 @@
     "description": "Remove source identifiers on URLs.",
     "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"],
     "background": {
-      "scripts": ["js/link-sanitizer.js", "js/copy-sanitizer.js"]
+      "scripts": ["js/listener.js"]
     },
   
     "icons": {
